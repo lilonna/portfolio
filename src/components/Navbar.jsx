@@ -12,19 +12,19 @@ const Navbar = () => {
         <ul className="flex justify-evenly flex-1 max-w-md font-medium text-white text-lg">
           <li className="flex items-center gap-2 hover:text-purple-300 transition-colors cursor-pointer">
             <FaHome />
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
           </li>
           <li className="flex items-center gap-2 hover:text-purple-300 transition-colors cursor-pointer">
             <FaUser />
-            <a href="#about">About me</a>
+            <a href="aboutme">About me</a>
           </li>
           <li className="flex items-center gap-2 hover:text-purple-300 transition-colors cursor-pointer">
             <FaProjectDiagram />
-            <a href="#projects">Projects</a>
+            <a href="projects">Projects</a>
           </li>
           <li className="flex items-center gap-2 hover:text-purple-300 transition-colors cursor-pointer">
             <FaEnvelope />
-            <a href="#contact">Contact me</a>
+            <a href="contact">Contact me</a>
           </li>
         </ul>
       </div>
