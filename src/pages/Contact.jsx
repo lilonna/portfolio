@@ -1,54 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-
-  const handleChange = e => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message sent!');
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
-    <div className="p-8 max-w-2xl mx-auto">
-      <h1 className="text-4xl font-bold text-blue-600 text-center mb-8">Contact Me</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          name="name"
-          type="text"
-          placeholder="Your Name"
-          className="w-full p-3 border rounded-lg"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          name="email"
-          type="email"
-          placeholder="Your Email"
-          className="w-full p-3 border rounded-lg"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          className="w-full p-3 border rounded-lg h-32"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        ></textarea>
-        <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-          Send Message
-        </button>
-      </form>
-    </div>
+    <section
+      id="contact"
+      className="d-flex align-items-center justify-content-center text-center min-vh-100"
+      style={{
+        background: 'linear-gradient(135deg, #e0bbff 0%, #fcd5ce 100%)',
+      }}
+    >
+      <div className="container px-4">
+        <h1 className="display-4 fw-bold text-primary mb-5">Contact Me</h1>
+        <div className="text-dark fs-5">
+          <p>
+            <strong>Email:</strong> <a href="mailto:lidiyahaile60@gmail.com" className="text-decoration-none text-primary">lidiyahaile60@gmail.com</a>
+          </p>
+          <p>
+            <strong>Phone:</strong> <a href="tel:+251933146431" className="text-decoration-none text-primary">+251 933146431</a>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>{' '}
+            <a href="https://www.linkedin.com/in/lidiya-haile-32b837199/" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-primary">
+              linkedin.com/in/lidiya-haile-32b837199/
+            </a>
+          </p>
+          <p>
+            <strong>GitHub:</strong>{' '}
+            <a href="https://github.com/lilonna" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-primary">
+              github.com/lilonna
+            </a>
+          </p>
+          <p>
+            <strong>Location:</strong> Hawassa, Ethiopia
+          </p>
+        </div>
+      </div>
+    </section>
   );
 };
 
